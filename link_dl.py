@@ -1,5 +1,5 @@
 import requests
-import os
+from os import exists
 import urllib.parse
 from pp_db import getAllObjects
 
@@ -28,7 +28,7 @@ for x in all_objects:
     file_dir = "files/" + filename 
 
     #only download if not found
-    if os.isfile(file_dir):
+    if exists(file_dir):
     
         #get file with requests
         req = requests.get(file_url)

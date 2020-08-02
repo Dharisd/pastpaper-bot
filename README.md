@@ -1,6 +1,6 @@
 # Installation
 
-```pip install -r requiremnts.py  ```
+```pip install -r requirements.txt  ```
 
 # Scraping 
 
@@ -10,6 +10,7 @@ scrp.py can scrape pdfs. Currently only supports scraping from physicsandmathstu
  ```python scrp.py --url https://www.physicsandmathstutor.com/past-papers/a-level-physics/edexcel-unit-2/```
 
 # Running the bot
-Replace api key with api key for your bot and
+set PPBOT_TOKEN env variable to your bot API key
+
 
 ```python conver.py```

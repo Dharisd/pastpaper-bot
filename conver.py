@@ -167,7 +167,7 @@ def main():
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    updater = Updater("INSERT YOUR API key", use_context=True)
+    updater = Updater(TOKEN, use_context=True)
 
 
 
@@ -201,7 +201,7 @@ def main():
     dp.add_error_handler(error)
 
     # Start the Bot
-    updater.start_polling(TOKEN)
+    updater.start_polling()
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since

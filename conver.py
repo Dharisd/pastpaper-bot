@@ -121,7 +121,7 @@ def sendFile(update, context):
     user = update.message.from_user
 
     file_data = getFile(context.user_data["subject"],context.user_data["year"],context.user_data["session"],context.user_data["unit"])
-    logger.info("%s %s %s %s %s",context.user_data["subject"],context.user_data["year"],context.user_data["session"],context.user_data["unit"],user.first_name) 
+    logger.info("%s %s %s %s %s",context.user_data["subject"],context.user_data["year"],context.user_data["session"],context.user_data["unit"],user.first_name + user.last_name) 
 
 
     for x in file_data:

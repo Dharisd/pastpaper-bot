@@ -28,7 +28,7 @@ for x in all_objects:
     file_dir = "files/" + filename 
 
     #only download if not found
-    if exists(file_dir):
+    if not exists(file_dir):
     
         #get file with requests
         req = requests.get(file_url)

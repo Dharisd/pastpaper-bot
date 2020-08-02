@@ -1,5 +1,5 @@
 import requests
-from os import exists
+from os.path import exists
 import urllib.parse
 from pp_db import getAllObjects
 

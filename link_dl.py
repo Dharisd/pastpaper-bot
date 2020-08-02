@@ -1,4 +1,5 @@
 import requests
+import os
 import urllib.parse
 from pp_db import getAllObjects
 
@@ -25,9 +26,12 @@ for x in all_objects:
     #print the current file name
     print(filename)
     file_dir = "files/" + filename 
-    
-    #get file with requests
-    req = requests.get(file_url)
 
-    with open(file_dir, 'wb') as f:
-        f.write(req.content)
+    #only download if not found
+    if os.isfile(file_dir):
+    
+        #get file with requests
+        req = requests.get(file_url)
+
+        with open(file_dir, 'wb') as f:
+            f.write(req.content)

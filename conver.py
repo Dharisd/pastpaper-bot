@@ -20,6 +20,7 @@ bot.
 
 import logging
 from pp_db import *
+import os
 import urllib.parse
 
 from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)
@@ -32,6 +33,7 @@ logging.basicConfig(filename="logfile2.log",format='%(asctime)s - %(name)s - %(l
 
 logger = logging.getLogger(__name__)
 
+TOKEN = os.getenv("PPBOT_TOKEN")
 START, UNIT, YEAR, SESSION, SENDFILE = range(5)
 
 
@@ -199,7 +201,7 @@ def main():
     dp.add_error_handler(error)
 
     # Start the Bot
-    updater.start_polling()
+    updater.start_polling(TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
